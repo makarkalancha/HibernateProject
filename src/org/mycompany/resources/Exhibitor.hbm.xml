@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="org.mycompany.objects.Exhibitor" table="exhibitor">
+		<meta attribute="class-description">
+			Exhibitor
+		</meta>
+		<id name="id" type="int" column="id">
+			<generator class="sequence">
+				<param name="sequence">exhibitor_id_seq</param>
+			</generator>
+		</id>
+		<property name="importBatchId" column="import_batch_id" type="int"/>
+		<property name="editionId" column="edition_id" type="int"/>
+		<property name="name" column="name" type="string"/>
+		<property name="shortName" column="shortname" type="string"/>
+		<property name="publishedName" column="publishedname" type="string"/>
+		<property name="featured" column="featured" type="boolean"/>
+		<property name="firsttime" column="firsttime" type="boolean"/>
+		<property name="customref1" column="customref1" type="string"/>
+		<property name="customref2" column="customref2" type="string"/>
+		<property name="statusClientAndBilling" column="statusclientandbilling" type="string"/>
+		<property name="dueDateClientAndBilling" column="duedateclientandbilling" type="date"/>
+		<property name="statusOrder" column="statusorder" type="string"/>
+		<property name="dueDateOrder" column="duedateorder" type="date"/>
+		<property name="statusAccount" column="statusaccount" type="string"/>
+		<property name="dueDateAccount" column="duedateaccount" type="date"/>
+		<property name="statusFollowupNotes" column="statusfollowupnotes" type="string"/>
+		<property name="dueDateFollowupNotes" column="duedatefollowupnotes" type="date"/>
+		<property name="statusConfirmation" column="statusconfirmation" type="string"/>
+		<property name="dueDateConfirmation" column="duedateconfirmation" type="date"/>
+		<property name="initialDescription" column="initialdescription" type="string"/>
+		<property name="fullDescription" column="fulldescription" type="string"/>
+		<property name="foreignId" column="foreignid" type="string"/>
+		<property name="orderEmailSubject" column="orderemailsubject" type="string"/>
+		<property name="orderEmailBody" column="orderemailbody" type="string"/>
+		<property name="orderSalesRep" column="ordersalesrep" type="string"/>
+		<property name="mainExhibitor" column="mainexhibitor" type="boolean"/>
+		<property name="deleted" column="deleted" type="boolean"/>
+		<property name="color" column="color" type="string"/>
+	</class>
+</hibernate-mapping>
